@@ -1,0 +1,18 @@
+# Ambiente virtual
+venv/
+.venv/
+
+# Cache do Python
+__pycache__/
+*.pyc
+*.pyo
+*.pyd
+
+# Banco de dados local
+escola.db
+
+# Arquivos de configuração de IDE e Git
+.vscode/
+.idea/
+.git/
+.gitignore

@@ -1,0 +1,14 @@
+services:
+  api:
+    # Constrói a imagem a partir do Dockerfile no diretório atual
+    build: .
+    container_name: imersao_devops
+    # Comando para iniciar a aplicação com uvicorn
+    # --host 0.0.0.0 é necessário para expor a API para fora do contêiner
+    volumes:
+      # Mapeia o diretório atual para /app dentro do contêiner
+      # Isso permite o hot-reload e persiste o banco de dados SQLite no seu computador
+      - .:/app
+    ports:
+      # Mapeia a porta 8000 do seu computador para a porta 8000 do contêiner
+      - "8000:8000"
